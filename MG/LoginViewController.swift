@@ -12,6 +12,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
     @IBAction func submitLoginInfo(_ sender: Any) {
         self.attemptLogin()
     }
@@ -49,10 +50,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func attemptLogin() {
+        self.submitButton.isEnabled = false
+        self.activitySpinner.startAnimating()
         AuthService.login(email: emailField.text!, password: passwordField.text!, completionHandler: { response in
+            self.submitButton.isEnabled = true
+            self.activitySpinner.stopAnimating()
             switch response {
             case .SUCCESS:
-                print("Success!")
+                self.performSegue(withIdentifier: "LoginToHomeSegue", sender: self)
             case .INVALID_CREDENTIALS:
                 self.addAlert(title: "Invalid username or password", message: "Please enter a valid username and password.")
             case .UNAUTHORIZED:

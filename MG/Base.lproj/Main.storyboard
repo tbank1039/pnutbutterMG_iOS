@@ -76,12 +76,16 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="gZ9-gp-x0Q">
+                                <rect key="frame" x="324" y="402" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.089786686000000004" green="0.068755902349999995" blue="0.2314123213" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bxy-LD-yY7" firstAttribute="centerX" secondItem="f9q-c1-ukr" secondAttribute="centerX" id="2Im-Z2-GH8"/>
                             <constraint firstItem="Bxy-LD-yY7" firstAttribute="top" secondItem="ShL-vi-PV1" secondAttribute="bottom" constant="38" id="5dt-Cr-yp2"/>
                             <constraint firstItem="f9q-c1-ukr" firstAttribute="top" secondItem="Bxy-LD-yY7" secondAttribute="bottom" constant="8" symbolic="YES" id="8bm-UX-GCJ"/>
+                            <constraint firstItem="gZ9-gp-x0Q" firstAttribute="centerY" secondItem="fI6-8Y-MZU" secondAttribute="centerY" id="Ehd-LF-zsd"/>
                             <constraint firstItem="Bxy-LD-yY7" firstAttribute="trailing" secondItem="ejZ-r2-eqB" secondAttribute="trailing" id="J45-oQ-Uxd"/>
                             <constraint firstItem="Bxy-LD-yY7" firstAttribute="leading" secondItem="ejZ-r2-eqB" secondAttribute="leading" id="Lde-YG-RSa"/>
                             <constraint firstItem="ejZ-r2-eqB" firstAttribute="trailing" secondItem="xm5-pL-vrj" secondAttribute="trailing" id="NLH-dK-wWI"/>
@@ -93,19 +97,50 @@
                             <constraint firstItem="f9q-c1-ukr" firstAttribute="leading" secondItem="PhL-qR-Co8" secondAttribute="leadingMargin" constant="71" id="kW2-xg-see"/>
                             <constraint firstItem="ejZ-r2-eqB" firstAttribute="leading" secondItem="xm5-pL-vrj" secondAttribute="leading" id="lzy-pV-V23"/>
                             <constraint firstItem="xm5-pL-vrj" firstAttribute="top" secondItem="ejZ-r2-eqB" secondAttribute="bottom" constant="8" symbolic="YES" id="nC8-C5-9iV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gZ9-gp-x0Q" secondAttribute="trailing" constant="15" id="o1c-3p-k9A"/>
                             <constraint firstItem="fI6-8Y-MZU" firstAttribute="top" secondItem="xm5-pL-vrj" secondAttribute="bottom" constant="8" symbolic="YES" id="uMy-6Z-Dk1"/>
                             <constraint firstItem="GYl-gG-osg" firstAttribute="top" secondItem="fI6-8Y-MZU" secondAttribute="bottom" constant="240" id="vWK-UI-qk7"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activitySpinner" destination="gZ9-gp-x0Q" id="eld-JK-LMR"/>
                         <outlet property="emailField" destination="ejZ-r2-eqB" id="a6j-cX-XLk"/>
                         <outlet property="passwordField" destination="xm5-pL-vrj" id="gto-wu-nZr"/>
                         <outlet property="submitButton" destination="fI6-8Y-MZU" id="VJ8-XY-oVX"/>
+                        <segue destination="mpZ-Ec-kBp" kind="show" identifier="LoginToHomeSegue" id="A11-ni-oIg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxo-sj-L9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1876" y="-331.48425787106447"/>
+            <point key="canvasLocation" x="-2039" y="-325"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="t4W-HG-CGJ">
+            <objects>
+                <tableViewController id="mpZ-Ec-kBp" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ka6-QR-u4x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="r61-fw-nQM">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r61-fw-nQM" id="qwN-7F-hEw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mpZ-Ec-kBp" id="fdY-DZ-WpG"/>
+                            <outlet property="delegate" destination="mpZ-Ec-kBp" id="jby-sd-Jpg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kor-Mh-T5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1042" y="-325"/>
         </scene>
     </scenes>
     <resources>

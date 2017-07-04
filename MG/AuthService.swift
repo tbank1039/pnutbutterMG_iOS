@@ -30,29 +30,10 @@ final class AuthService {
                 response in
                 switch response.result {
                 case .failure(_):
-                    print("Failure.")
                     if let statusCode = response.response?.statusCode {
                         print(statusCode)
                         if(statusCode == 401) {
-                            if response.data != nil {
-                                guard let responseJSON = response.result.value as? [[String: AnyObject]] else {
-                                    print("Didnt get json from api")
-                                    return completionHandler(C.LoginStatus.UNKNOWN_ERROR)
-                                }
-                                let test = responseJSON.flatMap {
-                                    print($0)
-                                }
-                                print(test)
-//                                let type = responseJSON["type"] as? String
-                                let type = "INVALID_CREDENTIALS"
-                                if !type.isEmpty {
-                                    if type == "INVALID_CREDENTIALS" {
-                                        return completionHandler(C.LoginStatus.INVALID_CREDENTIALS)
-                                    } else if type == "UNAUTHORIZED_ACCESS" {
-                                        return completionHandler(C.LoginStatus.UNAUTHORIZED)
-                                    }
-                                }
-                            }
+                            return completionHandler(C.LoginStatus.INVALID_CREDENTIALS)
                         }
                     }
                     return completionHandler(C.LoginStatus.UNKNOWN_ERROR)
