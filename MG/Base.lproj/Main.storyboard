@@ -107,29 +107,142 @@
                         <outlet property="emailField" destination="ejZ-r2-eqB" id="a6j-cX-XLk"/>
                         <outlet property="passwordField" destination="xm5-pL-vrj" id="gto-wu-nZr"/>
                         <outlet property="submitButton" destination="fI6-8Y-MZU" id="VJ8-XY-oVX"/>
-                        <segue destination="cH4-wT-trv" kind="show" identifier="LoginToHomeSegue" id="vKJ-SX-rTE"/>
+                        <segue destination="ggf-aK-1gP" kind="show" identifier="LoginToHomeSegue" id="JGo-Tq-AmU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxo-sj-L9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2039" y="-325"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Campaigns-->
         <scene sceneID="G3k-qQ-W74">
             <objects>
-                <tableViewController id="ggf-aK-1gP" sceneMemberID="viewController">
+                <tableViewController title="Campaigns" id="ggf-aK-1gP" customClass="CampaignIndexTableViewController" customModule="MG" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="941-Wk-Sij">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aH9-u3-li3">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CampaignIndexTableViewCell" rowHeight="120" id="aH9-u3-li3" customClass="CampaignIndexTableViewCell" customModule="MG" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aH9-u3-li3" id="glY-hv-GJf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMM-ho-XhI">
+                                            <rect key="frame" x="8" y="8" width="359" height="104"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoH-yZ-Vb3">
+                                                    <rect key="frame" x="8" y="0.0" width="351" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Jog-eV-9C1"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Campaign">
+                                                            <attributes>
+                                                                <font key="NSFont" size="20" name=".AppleSystemUIFontEmphasized"/>
+                                                                <font key="NSOriginalFont" size="17" name=".AppleSystemUIFontEmphasized"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opx-SE-QsT">
+                                                    <rect key="frame" x="4" y="53" width="351" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="xP7-zI-5P3"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Game Master">
+                                                            <attributes>
+                                                                <font key="NSFont" size="20" name="HelveticaNeue-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                    <tabStops>
+                                                                        <textTab alignment="left" location="28">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="56">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="84">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="112">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="140">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="168">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="196">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="224">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="252">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="280">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="308">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="336">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                    </tabStops>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfl-Mi-oP9">
+                                                    <rect key="frame" x="8" y="82" width="351" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.50935071243523322" green="0.50935071243523322" blue="0.50935071243523322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRN-lo-Xdb">
+                                                    <rect key="frame" x="8" y="29" width="343" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.51661674222797926" green="0.51661674222797926" blue="0.51661674222797926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="JRN-lo-Xdb" firstAttribute="leading" secondItem="QoH-yZ-Vb3" secondAttribute="leading" id="9cy-H9-W0G"/>
+                                                <constraint firstItem="Opx-SE-QsT" firstAttribute="centerX" secondItem="JRN-lo-Xdb" secondAttribute="centerX" id="BOV-R1-vA2"/>
+                                                <constraint firstItem="Opx-SE-QsT" firstAttribute="leading" secondItem="kMM-ho-XhI" secondAttribute="leading" constant="4" id="CCT-vx-OKL"/>
+                                                <constraint firstItem="bfl-Mi-oP9" firstAttribute="top" secondItem="Opx-SE-QsT" secondAttribute="bottom" constant="8" symbolic="YES" id="DZ2-8W-DRv"/>
+                                                <constraint firstItem="bfl-Mi-oP9" firstAttribute="trailing" secondItem="QoH-yZ-Vb3" secondAttribute="trailing" id="Kex-ra-Mr5"/>
+                                                <constraint firstItem="QoH-yZ-Vb3" firstAttribute="leading" secondItem="kMM-ho-XhI" secondAttribute="leadingMargin" id="c2h-yq-Fbd"/>
+                                                <constraint firstItem="JRN-lo-Xdb" firstAttribute="top" secondItem="QoH-yZ-Vb3" secondAttribute="bottom" constant="8" symbolic="YES" id="fbc-PO-WSq"/>
+                                                <constraint firstItem="QoH-yZ-Vb3" firstAttribute="top" secondItem="kMM-ho-XhI" secondAttribute="top" id="iSf-Fc-Wtn"/>
+                                                <constraint firstAttribute="trailing" secondItem="QoH-yZ-Vb3" secondAttribute="trailing" id="meI-JW-7KL"/>
+                                                <constraint firstItem="bfl-Mi-oP9" firstAttribute="leading" secondItem="JRN-lo-Xdb" secondAttribute="leading" id="rrT-F6-Cl9"/>
+                                                <constraint firstItem="JRN-lo-Xdb" firstAttribute="trailing" secondItem="kMM-ho-XhI" secondAttribute="trailingMargin" id="yFj-nd-zAC"/>
+                                                <constraint firstItem="Opx-SE-QsT" firstAttribute="top" secondItem="JRN-lo-Xdb" secondAttribute="bottom" constant="3" id="zhT-Ta-AWi"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="kMM-ho-XhI" firstAttribute="centerY" secondItem="glY-hv-GJf" secondAttribute="centerY" id="F0h-du-N8d"/>
+                                        <constraint firstItem="kMM-ho-XhI" firstAttribute="top" secondItem="glY-hv-GJf" secondAttribute="topMargin" id="GHi-Y2-5mQ"/>
+                                        <constraint firstItem="kMM-ho-XhI" firstAttribute="leading" secondItem="glY-hv-GJf" secondAttribute="leadingMargin" id="Hm9-qo-1EA"/>
+                                        <constraint firstItem="kMM-ho-XhI" firstAttribute="trailing" secondItem="glY-hv-GJf" secondAttribute="trailingMargin" id="Suu-Eu-Y91"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="campaignName" destination="JRN-lo-Xdb" id="mHD-As-YYh"/>
+                                    <outlet property="gameMasterName" destination="bfl-Mi-oP9" id="XeU-IV-MZ7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -137,10 +250,11 @@
                             <outlet property="delegate" destination="ggf-aK-1gP" id="Yj9-Q4-AWb"/>
                         </connections>
                     </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hrx-WX-INz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1011" y="-317"/>
+            <point key="canvasLocation" x="-1014" y="-308"/>
         </scene>
         <!--NPCs-->
         <scene sceneID="jhX-aE-LAF">

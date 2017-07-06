@@ -17,6 +17,9 @@
 		249FE3531F09B5C100B9F3F0 /* MGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249FE3521F09B5C100B9F3F0 /* MGTests.swift */; };
 		249FE35E1F09B5C100B9F3F0 /* MGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249FE35D1F09B5C100B9F3F0 /* MGUITests.swift */; };
 		266578F33EE15134F35423B5 /* Pods_MG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB96640661412E4F7959EB40 /* Pods_MG.framework */; };
+		2C03B0441F0DD36C00604BB0 /* CampaignIndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03B0431F0DD36C00604BB0 /* CampaignIndexTableViewController.swift */; };
+		2C03B0461F0DD3A900604BB0 /* CampaignIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03B0451F0DD3A900604BB0 /* CampaignIndexTableViewCell.swift */; };
+		2C03B0481F0DD46200604BB0 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03B0471F0DD46200604BB0 /* Campaign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		249FE3591F09B5C100B9F3F0 /* MGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		249FE35D1F09B5C100B9F3F0 /* MGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGUITests.swift; sourceTree = "<group>"; };
 		249FE35F1F09B5C100B9F3F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C03B0431F0DD36C00604BB0 /* CampaignIndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignIndexTableViewController.swift; sourceTree = "<group>"; };
+		2C03B0451F0DD3A900604BB0 /* CampaignIndexTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignIndexTableViewCell.swift; sourceTree = "<group>"; };
+		2C03B0471F0DD46200604BB0 /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		8E42C50B73D150C9C7E88395 /* Pods-MG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MG/Pods-MG.debug.xcconfig"; sourceTree = "<group>"; };
 		EB4F9A7708582DA6A12A9BFC /* Pods-MG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MG.release.xcconfig"; path = "Pods/Target Support Files/Pods-MG/Pods-MG.release.xcconfig"; sourceTree = "<group>"; };
 		FB96640661412E4F7959EB40 /* Pods_MG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				2435915F1F0AC3450005039E /* LoginViewController.swift */,
+				2C03B0431F0DD36C00604BB0 /* CampaignIndexTableViewController.swift */,
+				2C03B0451F0DD3A900604BB0 /* CampaignIndexTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -94,6 +102,7 @@
 		243591591F0AB7A20005039E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2C03B0471F0DD46200604BB0 /* Campaign.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -367,7 +376,10 @@
 			files = (
 				243591601F0AC3450005039E /* LoginViewController.swift in Sources */,
 				2435915E1F0AB9FB0005039E /* Constants.swift in Sources */,
+				2C03B0481F0DD46200604BB0 /* Campaign.swift in Sources */,
 				249FE33C1F09B5C100B9F3F0 /* AppDelegate.swift in Sources */,
+				2C03B0441F0DD36C00604BB0 /* CampaignIndexTableViewController.swift in Sources */,
+				2C03B0461F0DD3A900604BB0 /* CampaignIndexTableViewCell.swift in Sources */,
 				2435915C1F0AB9A80005039E /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
