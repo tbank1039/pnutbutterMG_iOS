@@ -22,6 +22,8 @@ class CampaignIndexTableViewController: UITableViewController {
         
         let sampleCampaign = Campaign(campaignId: 1, name: "Mouse Guards Gone Wild", gameMaster: "Jokin Jocab")
         campaigns = [sampleCampaign]
+        
+        self.refreshControl?.addTarget(self, action: #selector(self.handleRefresh(_:)), for: UIControlEvents.valueChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,41 +55,16 @@ class CampaignIndexTableViewController: UITableViewController {
         cell.gameMasterName.text = campaign.gameMaster
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func handleRefresh(_ refreshControl : UIRefreshControl) {
+        let newCampaign = Campaign(campaignId: 1, name: "Mouse Guard OG", gameMaster: "Parker Murphy")
+        campaigns.append(newCampaign)
+        
+        campaigns.sort() { $0.name < $1.name }
+        
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
