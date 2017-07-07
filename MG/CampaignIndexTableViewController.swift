@@ -19,9 +19,10 @@ class CampaignIndexTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        let sampleCampaign = Campaign(campaignId: 1, name: "Mouse Guards Gone Wild", gameMaster: "Jokin Jocab")
-        campaigns = [sampleCampaign]
+        CampaignService.getCampaigns(completionHandler: { response in
+            self.campaigns = response.value!
+            self.tableView.reloadData()
+        })
         
         self.refreshControl?.addTarget(self, action: #selector(self.handleRefresh(_:)), for: UIControlEvents.valueChanged)
     }
@@ -57,9 +58,6 @@ class CampaignIndexTableViewController: UITableViewController {
     }
     
     func handleRefresh(_ refreshControl : UIRefreshControl) {
-        let newCampaign = Campaign(campaignId: 1, name: "Mouse Guard OG", gameMaster: "Parker Murphy")
-        campaigns.append(newCampaign)
-        
         campaigns.sort() { $0.name < $1.name }
         
         self.tableView.reloadData()

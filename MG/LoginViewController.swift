@@ -23,6 +23,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         emailField.delegate = self
         passwordField.delegate = self
+        emailField.text = "parkermur@gmail.com"
+        passwordField.text = "test1234"
     }
 
     override func didReceiveMemoryWarning() {

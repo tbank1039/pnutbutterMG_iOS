@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2403CEAD1F0F3669001713F1 /* CampaignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403CEAC1F0F3669001713F1 /* CampaignService.swift */; };
 		2435915C1F0AB9A80005039E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2435915B1F0AB9A80005039E /* AuthService.swift */; };
 		2435915E1F0AB9FB0005039E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2435915D1F0AB9FB0005039E /* Constants.swift */; };
 		243591601F0AC3450005039E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2435915F1F0AC3450005039E /* LoginViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2403CEAC1F0F3669001713F1 /* CampaignService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignService.swift; sourceTree = "<group>"; };
 		2435915B1F0AB9A80005039E /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		2435915D1F0AB9FB0005039E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2435915F1F0AC3450005039E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				2435915B1F0AB9A80005039E /* AuthService.swift */,
+				2403CEAC1F0F3669001713F1 /* CampaignService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				243591601F0AC3450005039E /* LoginViewController.swift in Sources */,
+				2403CEAD1F0F3669001713F1 /* CampaignService.swift in Sources */,
 				2435915E1F0AB9FB0005039E /* Constants.swift in Sources */,
 				2C03B0481F0DD46200604BB0 /* Campaign.swift in Sources */,
 				249FE33C1F09B5C100B9F3F0 /* AppDelegate.swift in Sources */,
