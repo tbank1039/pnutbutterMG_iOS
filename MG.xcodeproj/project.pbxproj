@@ -259,7 +259,7 @@
 				TargetAttributes = {
 					249FE3371F09B5C100B9F3F0 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = YJBB9ZW8T7;
+						DevelopmentTeam = 5F36D52DA2;
 						ProvisioningStyle = Automatic;
 					};
 					249FE34D1F09B5C100B9F3F0 = {
@@ -533,12 +533,13 @@
 			baseConfigurationReference = 8E42C50B73D150C9C7E88395 /* Pods-MG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = YJBB9ZW8T7;
+				DEVELOPMENT_TEAM = 5F36D52DA2;
 				INFOPLIST_FILE = MG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PeanutAndButterGames.MG;
+				PRODUCT_BUNDLE_IDENTIFIER = "PeanutAndButterGames.MG-parker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -547,12 +548,13 @@
 			baseConfigurationReference = EB4F9A7708582DA6A12A9BFC /* Pods-MG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = YJBB9ZW8T7;
+				DEVELOPMENT_TEAM = 5F36D52DA2;
 				INFOPLIST_FILE = MG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PeanutAndButterGames.MG;
+				PRODUCT_BUNDLE_IDENTIFIER = "PeanutAndButterGames.MG-parker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
